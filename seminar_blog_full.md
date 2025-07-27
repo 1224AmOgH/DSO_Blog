@@ -129,6 +129,7 @@ Any distinct non-stellar feature identified in the image is boxed using OpenCV f
 These bounding boxes are then drawn back onto the original image, highlighting where DSOs were found. 
 
 **Results:**  
+![Alt text](https://github.com/1224AmOgH/DSO_Blog/blob/main/%232.png)
 
 **Limitations** 
 
@@ -152,6 +153,8 @@ This method may be helpful for quick demos or rough filtering, especially if com
 "YOLO" stands for You Only Look Once, a deep learning architecture designed for real-time object detection. YOLO models scan an image in one pass, identifying both the presence and position of objects with bounding boxes. It is fast, accurate and well suited to applications where both speed and spatial awareness matter like identifying galaxies and nebulae in telescope images. 
 
 **How It Was Implemented** 
+
+![Alt text](https://github.com/1224AmOgH/DSO_Blog/blob/main/%233.png)
 
 _The YOLOv7 pipeline takes a telescope image as input and outputs bounding boxes identifying Deep Sky Objects (DSOs) in real time._ 
 
@@ -190,6 +193,7 @@ Instead of training from scratch, the model was built using transfer learning st
 This was the best-performing model among all approaches tested, delivering clean bounding boxes around DSOs  even in moderately noisy, light-polluted images. 
 
 **Result:**  A wide-field image of Messier 49 (a galaxy in the Virgo cluster) showed clear, annotated boxes over the primary target and surrounding galaxies—visible even to non-expert viewers. 
+![Alt text](https://github.com/1224AmOgH/DSO_Blog/blob/main/%234.png)
 
 **Strengths** 
 
@@ -212,6 +216,7 @@ This was the best-performing model among all approaches tested, delivering clean
 While YOLOv7 excels at spotting DSOs, it acts like a “black box” you get bounding boxes, but no insight into how the model arrived at that result. This is where Explainable AI (XAI) comes in. In this technique, a deep learning classifier detects whether a DSO is present in an image, and then XRAI (a post-hoc explainability tool) generates a heatmap showing which parts of the image contributed most to that decision. 
 
 **How It Works** 
+![Alt text](https://github.com/1224AmOgH/DSO_Blog/blob/main/%235.png)
 
 _This pipeline classifies telescope images using ResNet50 and, if a DSO is detected, provides an interpretable explanation for accessible understanding._ 
 
@@ -277,7 +282,10 @@ While slightly less precise than YOLOv7, it provides something YOLO cannot: visu
 
 *   **Research and outreach**: Great for explaining how AI “thinks” about astronomical images. 
     
-*   **Model development**: Identifying failure points and refining detection strategies. 
+*   **Model development**: Identifying failure points and refining detection strategies.
+
+  ![Alt text](https://github.com/1224AmOgH/DSO_Blog/blob/main/%236.png)
+  ![Alt text]([https://github.com/1224AmOgH/DSO_Blog/blob/main/%235.png](https://github.com/1224AmOgH/DSO_Blog/blob/main/%237.png))
     
 
 *   The core of Messier 13 (globular cluster) 
@@ -355,7 +363,9 @@ For example, an image of Messier 17 (Omega Nebula) processed with Pix2Pix produc
 
 *   **Slightly less precise**: Not as analytically accurate as true XRAI, especially under noisy or low-contrast conditions. 
     
-*   **No object labeling**: It shows _where_ the DSO is, but not _what_ it is. 
+*   **No object labeling**: It shows _where_ the DSO is, but not _what_ it is.
+
+    ![Alt text](https://github.com/1224AmOgH/DSO_Blog/blob/main/%238.png)
     
 
 **Summary** 
