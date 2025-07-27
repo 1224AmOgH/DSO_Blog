@@ -1,4 +1,4 @@
-**Introduction** 
+*Introduction*
 
 With the growth of smart telescopes capable of Electronically Assisted Astronomy (EAA), astronomy is becoming more accessible to hobbyists and the public. Yet, detecting faint galaxies, nebulae and clusters in light-polluted skies remains a persistent challenge. The paper _"Deep Sky Objects Detection with Deep Learning for Electronically Assisted Astronomy"_ by Parisot & Jaziri tackles this head-on—crafting deep learning (DL) solutions that help in real-time detection of celestial wonders. In this blog, we discover and explore a range of deep learning techniques developed for detecting Deep Sky Objects (DSOs) in images captured by smart telescopes and provide a glimpse into how each technique works and reflect on their possible real-world applications. 
 
@@ -285,10 +285,12 @@ While slightly less precise than YOLOv7, it provides something YOLO cannot: visu
 *   **Model development**: Identifying failure points and refining detection strategies.
 
   ![Alt text](https://github.com/1224AmOgH/DSO_Blog/blob/main/%236.png)
+  *   The core of Messier 13 (globular cluster)
+    
  ![Alt text](https://github.com/1224AmOgH/DSO_Blog/blob/main/%237.png)
     
 
-*   The core of Messier 13 (globular cluster) 
+
     
 
 *   The faint glow of **Messier 76 (Little Dumbbell Nebula)** 
