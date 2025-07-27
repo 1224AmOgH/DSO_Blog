@@ -361,61 +361,14 @@ For example, an image of Messier 17 (Omega Nebula) processed with Pix2Pix produc
 
 Each deep learning technique explored in this study brings distinct strengths tailored to different use cases in Electronically Assisted Astronomy. The **StarNet + CV** approach offers a quick and simple baseline but struggles with accuracy and noise. **YOLOv7** stands out as the most robust and balanced model, delivering high precision and real-time detection making it ideal for both automation and outreach. **ResNet50 + XRAI** trades speed for deep interpretability, offering rich visual insights into model reasoning, which is especially valuable for educational and scientific transparency. Finally, the **Pix2Pix GAN** cleverly mimics XRAI's outputs at a fraction of the cost, providing fast visual feedback for user-friendly applications. Together, these models represent a powerful toolkit, capable of transforming smart telescopes from passive imaging devices into intelligent, interactive observatories. 
 
-**Aspect** 
-
-**YOLOv7** 
-
-**ResNet + XRAI** 
-
-**Pix2Pix GAN** 
-
-**Goal** 
-
-Detect and localize DSO with bounding boxes 
-
-Classify presence of DSO + explain via XAI 
-
-Generate heatmap-like visual explanation 
-
-**Output** 
-
-Bounding boxes around DSOs 
-
-Binary class + XRAI heatmap 
-
-Annotated image (XRAI-style overlay) 
-
-**Architecture** 
-
-One-stage object detector 
-
-Deep CNN + Post-hoc XAI 
-
-Conditional GAN (U-Net + PatchGAN) 
-
-**Speed** 
-
-Fast (real-time capable) 
-
-Slow (XRAI is slow) 
-
-Fast (single pass, much faster than XRAI) 
-
-**Explainability** 
-
-No (black-box) 
-
-Yes (XRAI) 
-
-Approximate (visually similar to XRAI) 
-
-**F1 Score** 
-
-0.62 (Best) 
-
-0.51 
-
-Not directly comparable (PSNR > 38) 
+| Aspect         | YOLOv7                                | ResNet + XRAI                         | Pix2Pix GAN                          |
+|---------------|--------------------------------------|---------------------------------------|--------------------------------------|
+| Goal          | Detect and localize DSO with bounding boxes | Classify presence of DSO + explain via XAI | Generate heatmap-like visual explanation |
+| Output        | Bounding boxes around DSOs            | Binary class + XRAI heatmap           | Annotated image (XRAI-style overlay) |
+| Architecture  | One-stage object detector             | Deep CNN + Post-hoc XAI               | Conditional GAN (U-Net + PatchGAN)   |
+| Speed         | Fast (real-time capable)              | Slow (XRAI is slow)                   | Fast (single pass, much faster than XRAI) |
+| Explainability| No (black-box)                        | Yes (XRAI)                            | Approximate (visually similar to XRAI) |
+| F1 Score      | 0.62 (Best)                           | 0.51                                  | Not directly comparable (PSNR >38)   |
 
 **Applications of Deep Learning in EAA** 
 
