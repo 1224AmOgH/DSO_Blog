@@ -285,7 +285,7 @@ While slightly less precise than YOLOv7, it provides something YOLO cannot: visu
 *   **Model development**: Identifying failure points and refining detection strategies.
 
   ![Alt text](https://github.com/1224AmOgH/DSO_Blog/blob/main/%236.png)
-  ![Alt text]([https://github.com/1224AmOgH/DSO_Blog/blob/main/%235.png](https://github.com/1224AmOgH/DSO_Blog/blob/main/%237.png))
+  ![Alt text]([https://github.com/1224AmOgH/DSO_Blog/blob/main/%235.png](https://github.com/1224AmOgH/DSO_Blog/blob/main/%237.png)
     
 
 *   The core of Messier 13 (globular cluster) 
