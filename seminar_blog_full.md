@@ -80,7 +80,13 @@ This bridges the gap between data and understanding, helping the user understand
 
 **Data Collection: Ground Truth from the Backyard Sky** 
 
-The training data used in this study was captured using consumer-grade smart telescopes—specifically the _Stellina_ and _Vespera_—in real-world conditions across Luxembourg, France, and Belgium. Over 50,000 raw FITS images and nearly 5,000 post-processed JPEG images were gathered during these sessions, often under light-polluted skies and variable weather. This dataset, featuring more than 250 different targets visible from the Northern Hemisphere. 
+The training data used in this study was captured using consumer-grade smart telescopes—specifically the _Stellina_ and _Vespera_—in real-world conditions across Luxembourg, France, and Belgium. Over 50,000 raw FITS images and nearly 5,000 post-processed JPEG images were gathered during these sessions, often under light-polluted skies and variable weather. This dataset, featuring more than 250 different targets visible from the Northern Hemisphere.
+
+| **Dataset**            | **Content**                                         | **Used For**                                                 |
+|------------------------|-----------------------------------------------------|---------------------------------------------------------------|
+| **Raw FITS Dataset**   | • Stored as high-resolution raw telescope output    | • Technique 1 (Star removal) + Evaluation                     |
+| **DeepSpaceYOLO Dataset** | • 4696 JPEG images, 608x608 resolution          | • Techniques 2 (YOLO), 3 (ResNet), Pix2Pix GAN                |
+
 
 **Diving into the Detection Techniques** 
 
