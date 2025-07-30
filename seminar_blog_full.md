@@ -136,7 +136,7 @@ These bounding boxes are then drawn back onto the original image, highlighting w
 
 **Results:** 
 
-![](./figure1.png)
+![](./figure2.png)
 <div style="text-align: center;">StarNet removes stars (left), and classic CV methods detect potential DSOs (right). Red boxes mark regions identified as non-stellar features using edge detection and OpenCV</div>
 
 _StarNet removes stars (left), and classic CV methods detect potential DSOs (right). Red boxes mark regions identified as non-stellar features using edge detection and OpenCV_ 
@@ -165,7 +165,7 @@ This method may be helpful for quick demos or rough filtering, especially if com
 **How It Was Implemented** 
 
 
-![](./%233.png)
+![](./figure3.png)
 <div style="text-align: center;">The YOLOv7 pipeline takes a telescope image as input and outputs bounding boxes identifying Deep Sky Objects (DSOs) in real time.</div>
 
 _The YOLOv7 pipeline takes a telescope image as input and outputs bounding boxes identifying Deep Sky Objects (DSOs) in real time._ 
@@ -206,7 +206,7 @@ This was the best-performing model among all approaches tested, delivering clean
 
 **Result:**  
 
-![](./%234.png)
+![](./figure4.png)
 <div style="text-align: center;">A wide-field image of Messier 49 (a galaxy in the Virgo cluster) showed clear, annotated boxes over the primary target and surrounding galaxies—visible even to non-expert viewers.</div>
 
 *A wide-field image of Messier 49 (a galaxy in the Virgo cluster) showed clear, annotated boxes over the primary target and surrounding galaxies—visible even to non-expert viewers.*
@@ -234,7 +234,7 @@ While YOLOv7 excels at spotting DSOs, it acts like a “black box” you get bou
 
 **How It Works** 
 
-![](./%235.png)
+![](./figure5.png)
 
 _This pipeline classifies telescope images using ResNet50 and, if a DSO is detected, provides an interpretable explanation for accessible understanding._ 
 
@@ -303,11 +303,11 @@ While slightly less precise than YOLOv7, it provides something YOLO cannot: visu
 
   **Results** 
 
-  ![](./%236.png)
+![](./figure6.png)
   
   *   The core of Messier 13 (globular cluster)
     
- ![](./%237.png)
+![](./figure7.png)
 
 *   The faint glow of **Messier 76 (Little Dumbbell Nebula)** 
     
@@ -383,7 +383,7 @@ For example, an image of Messier 17 (Omega Nebula) processed with Pix2Pix produc
     
 *   **No object labeling**: It shows _where_ the DSO is, but not _what_ it is.
 
-    ![](./%238.png)
+    ![](./figure8.png)
     
 
 **Summary** 
