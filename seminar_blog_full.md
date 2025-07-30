@@ -109,7 +109,7 @@ The first method tested is simple yet creative approach: remove distracting star
 
 **How It Works – Step by Step** 
 <ol>
-<li>1.  **Apply StarNet** </li>
+<li> <b>Apply StarNet</b> </li>
     
 StarNet is a pre-trained deep learning model designed to remove stars from astronomical images. It outputs an image with only the background content typically nebulae, galaxies, or clusters. 
 
