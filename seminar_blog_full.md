@@ -199,8 +199,9 @@ Instead of training from scratch, the model was built using transfer learning st
 
 This was the best-performing model among all approaches tested, delivering clean bounding boxes around DSOs  even in moderately noisy, light-polluted images. 
 
-**Result:**  A wide-field image of Messier 49 (a galaxy in the Virgo cluster) showed clear, annotated boxes over the primary target and surrounding galaxies—visible even to non-expert viewers. 
+**Result:**  
 ![Alt text](https://github.com/1224AmOgH/DSO_Blog/blob/main/%234.png)
+_ A wide-field image of Messier 49 (a galaxy in the Virgo cluster) showed clear, annotated boxes over the primary target and surrounding galaxies—visible even to non-expert viewers._ 
 
 **Strengths** 
 
@@ -232,24 +233,24 @@ _This pipeline classifies telescope images using ResNet50 and, if a DSO is detec
 
 Images are first fed into a **ResNet50** model—a powerful convolutional neural network that learns to answer a simple question: _Is a DSO present in this image?_  The dataset used here was balanced between images with and without DSOs, with careful labeling to avoid bias. 
 
-1.  **Explainability with XRAI** 
+2.  **Explainability with XRAI** 
     
 
 Once the model classifies an image as “DSO present,” **XRAI** (a technique based on Integrated Gradients) kicks in to highlight _where_ in the image the most influential features are. These show up as a **heatmap overlay**, revealing the “attention zones” the model focused on. 
 
 Working: 
 
-1.  **Integrated Gradients as a Foundation** 
+3.  **Integrated Gradients as a Foundation** 
     
 
 XRAI builds on a technique called Integrated Gradients, which estimates how much each pixel contributes to the model’s final output. It does this by comparing the real image to a “baseline” (typically a black image representing sky background) and measuring how predictions change as the image morphs from the baseline to the real input. 
 
-1.  **Region Segmentation** 
+4.  **Region Segmentation** 
     
 
 Instead of analyzing pixels individually, XRAI groups pixels into superpixels coherent regions of the image—like the bright core of a galaxy or the wispy edges of a nebula. 
 
-1.  **Attribution Scoring** 
+5.  **Attribution Scoring** 
     
 
 It then assigns importance scores to these regions based on how much they changed the model's confidence during the integration process. 
