@@ -201,7 +201,9 @@ This was the best-performing model among all approaches tested, delivering clean
 
 **Result:**  
 ![Alt text](https://github.com/1224AmOgH/DSO_Blog/blob/main/%234.png)
-_ A wide-field image of Messier 49 (a galaxy in the Virgo cluster) showed clear, annotated boxes over the primary target and surrounding galaxies—visible even to non-expert viewers._ 
+
+*A wide-field image of Messier 49 (a galaxy in the Virgo cluster) showed clear, annotated boxes over the primary target and surrounding galaxies—visible even to non-expert viewers.*
+
 
 **Strengths** 
 
