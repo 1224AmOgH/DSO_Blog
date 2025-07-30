@@ -136,7 +136,7 @@ These bounding boxes are then drawn back onto the original image, highlighting w
 
 **Results:** 
 
-![](./%232.png)
+![](./figure1.png)
 <div style="text-align: center;">StarNet removes stars (left), and classic CV methods detect potential DSOs (right). Red boxes mark regions identified as non-stellar features using edge detection and OpenCV</div>
 
 _StarNet removes stars (left), and classic CV methods detect potential DSOs (right). Red boxes mark regions identified as non-stellar features using edge detection and OpenCV_ 
