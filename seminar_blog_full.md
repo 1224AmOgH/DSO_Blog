@@ -30,6 +30,9 @@ These issues underscore the need for intelligent, real-time DSO detection and an
 This diagram outlines the conceptual flow of how deep learning turns raw telescope imagery into actionable insights, accessible even to non-experts. 
 ![Alt text](https://github.com/1224AmOgH/DSO_Blog/blob/main/%231.png)
 
+![](#1.png)
+<div style="text-align: center;">Figure 3: Secondary structure comparison </div>
+
 **Step 1: Raw Telescope Image** 
 
 Smart telescopes capture long-exposure, stacked images of the night sky. These frames may include stars, galaxies, nebulae and noise due to light pollution or atmospheric interference. 
