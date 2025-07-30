@@ -103,7 +103,7 @@ Now that we have established the motivation and the data behind this research, w
 
 **Technique 1: Naive Detection Using StarNet + Computer Vision** 
 
-**What it is?** 
+**Overview** 
 
 The first method tested is simple yet creative approach: remove distracting stars from the image using a tool called StarNet and then apply classic computer vision (CV) techniques. The idea here was to strip out the stars first and then isolate what might be celestial objects of interest. 
 
@@ -158,7 +158,7 @@ This method may be helpful for quick demos or rough filtering, especially if com
 
 **Technique 2: Object Detection with a Custom YOLOv7 Model** 
 
-**What it is?** 
+**Overview** 
 
 "YOLO" stands for You Only Look Once, a deep learning architecture designed for real-time object detection. YOLO models scan an image in one pass, identifying both the presence and position of objects with bounding boxes. It is fast, accurate and well suited to applications where both speed and spatial awareness matter like identifying galaxies and nebulae in telescope images. 
 
@@ -229,6 +229,8 @@ This was the best-performing model among all approaches tested, delivering clean
     
 
 **Technique 3: DSO Classification with ResNet50 and Explainable AI (XRAI)** 
+
+**Overview**
 
 While YOLOv7 excels at spotting DSOs, it acts like a “black box” you get bounding boxes, but no insight into how the model arrived at that result. This is where Explainable AI (XAI) comes in. In this technique, a deep learning classifier detects whether a DSO is present in an image, and then XRAI (a post-hoc explainability tool) generates a heatmap showing which parts of the image contributed most to that decision. 
 
@@ -314,7 +316,7 @@ While slightly less precise than YOLOv7, it provides something YOLO cannot: visu
 
 Technique 4: Fast DSO Highlighting with Pix2Pix GAN 
 
-**Why a GAN?** 
+**Overview** 
 
 The third technique (ResNet50 + XRAI) gave us incredibly useful heatmaps showing which regions of the image contained Deep Sky Objects. But there is a catch: XRAI is slow, especially on large and high-resolution images. It becomes a problem when you want to provide real-time feedback. 
 
