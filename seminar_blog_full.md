@@ -317,7 +317,7 @@ While slightly less precise than YOLOv7, it provides something YOLO cannot: visu
 *   The faint glow of **Messier 76 (Little Dumbbell Nebula)** 
     
 
-Technique 4: Fast DSO Highlighting with Pix2Pix GAN 
+**Technique 4: Fast DSO Highlighting with Pix2Pix GAN** 
 
 **Overview** 
 
