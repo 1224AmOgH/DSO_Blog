@@ -92,13 +92,13 @@ The training data used in this study was captured using consumer-grade smart tel
 
 Now that we have established the motivation and the data behind this research, we will dive into the four key deep learning techniques implemented to tackle the challenge of Deep Sky Object detection. Each approach brings a unique blend of speed, accuracy, and interpretability. These include: 
 
-1.  A **naive approach** using StarNet with basic computer vision 
+*    A **naive approach** using StarNet with basic computer vision 
     
-2.  A **custom-trained YOLOv7** object detection model 
+*    A **custom-trained YOLOv7** object detection model 
     
-3.  A **ResNet50 classifier combined with XRAI** for explainable detection 
+*    A **ResNet50 classifier combined with XRAI** for explainable detection 
     
-4.  A **Pix2Pix GAN model** that mimics attention maps for rapid visual feedback 
+*    A **Pix2Pix GAN model** that mimics attention maps for rapid visual feedback 
     
 
 **Technique 1: Naive Detection Using StarNet + Computer Vision** 
@@ -135,7 +135,9 @@ Any distinct non-stellar feature identified in the image is boxed using OpenCV f
 These bounding boxes are then drawn back onto the original image, highlighting where DSOs were found. 
 
 **Results:**  
+
 ![Alt text](https://github.com/1224AmOgH/DSO_Blog/blob/main/%232.png)
+
 _StarNet removes stars (left), and classic CV methods detect potential DSOs (right). Red boxes mark regions identified as non-stellar features using edge detection and OpenCV_ 
 
 **Limitations** 
@@ -200,6 +202,7 @@ Instead of training from scratch, the model was built using transfer learning st
 This was the best-performing model among all approaches tested, delivering clean bounding boxes around DSOs  even in moderately noisy, light-polluted images. 
 
 **Result:**  
+
 ![Alt text](https://github.com/1224AmOgH/DSO_Blog/blob/main/%234.png)
 
 *A wide-field image of Messier 49 (a galaxy in the Virgo cluster) showed clear, annotated boxes over the primary target and surrounding galaxies—visible even to non-expert viewers.*
@@ -233,38 +236,37 @@ _This pipeline classifies telescope images using ResNet50 and, if a DSO is detec
 1.  **Binary Classification with ResNet50** 
     
 
-Images are first fed into a **ResNet50** model—a powerful convolutional neural network that learns to answer a simple question: _Is a DSO present in this image?_  The dataset used here was balanced between images with and without DSOs, with careful labeling to avoid bias. 
+    Images are first fed into a **ResNet50** model—a powerful convolutional neural network that learns to answer a simple question: _Is a DSO present in this image?_  The dataset used here was balanced between images with and without DSOs, with careful labeling to avoid bias. 
 
 2.  **Explainability with XRAI** 
     
 
-Once the model classifies an image as “DSO present,” **XRAI** (a technique based on Integrated Gradients) kicks in to highlight _where_ in the image the most influential features are. These show up as a **heatmap overlay**, revealing the “attention zones” the model focused on. 
+    Once the model classifies an image as “DSO present,” **XRAI** (a technique based on Integrated Gradients) kicks in to highlight _where_ in the image the most influential features are. These show up as a **heatmap overlay**, revealing the “attention zones” the model focused on. 
 
-Working: 
 
 3.  **Integrated Gradients as a Foundation** 
     
 
-XRAI builds on a technique called Integrated Gradients, which estimates how much each pixel contributes to the model’s final output. It does this by comparing the real image to a “baseline” (typically a black image representing sky background) and measuring how predictions change as the image morphs from the baseline to the real input. 
+    XRAI builds on a technique called Integrated Gradients, which estimates how much each pixel contributes to the model’s final output. It does this by comparing the real image to a “baseline” (typically a black image representing sky background) and measuring how predictions change as the image morphs from the baseline to the real input. 
 
 4.  **Region Segmentation** 
     
 
-Instead of analyzing pixels individually, XRAI groups pixels into superpixels coherent regions of the image—like the bright core of a galaxy or the wispy edges of a nebula. 
+    Instead of analyzing pixels individually, XRAI groups pixels into superpixels coherent regions of the image—like the bright core of a galaxy or the wispy edges of a nebula. 
 
 5.  **Attribution Scoring** 
     
 
-It then assigns importance scores to these regions based on how much they changed the model's confidence during the integration process. 
+    It then assigns importance scores to these regions based on how much they changed the model's confidence during the integration process. 
 
-1.  **Heatmap Generation** 
+6.  **Heatmap Generation** 
     
 
-The regions with the highest cumulative contribution are overlaid as heatmaps, allowing you to visualize where the model “looked” when it decided that a DSO was present. 
+    The regions with the highest cumulative contribution are overlaid as heatmaps, allowing you to visualize where the model “looked” when it decided that a DSO was present. 
 
 So, when you see a bright blue blob on an XRAI map, you are essentially seeing where the model focused its attention the most influential pixels in the decision-making process. 
 
-**Results & Performance** 
+**Performance** 
 
 *   **Accuracy** (classification): ~97% on validation set 
     
@@ -293,6 +295,8 @@ While slightly less precise than YOLOv7, it provides something YOLO cannot: visu
 *   **Research and outreach**: Great for explaining how AI “thinks” about astronomical images. 
     
 *   **Model development**: Identifying failure points and refining detection strategies.
+
+  **Results** 
 
   ![Alt text](https://github.com/1224AmOgH/DSO_Blog/blob/main/%236.png)
   *   The core of Messier 13 (globular cluster)
