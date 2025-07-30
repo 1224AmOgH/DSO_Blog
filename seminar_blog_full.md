@@ -136,6 +136,7 @@ These bounding boxes are then drawn back onto the original image, highlighting w
 
 **Results:**  
 ![Alt text](https://github.com/1224AmOgH/DSO_Blog/blob/main/%232.png)
+_StarNet removes stars (left), and classic CV methods detect potential DSOs (right). Red boxes mark regions identified as non-stellar features using edge detection and OpenCV_ 
 
 **Limitations** 
 
@@ -169,31 +170,31 @@ _The YOLOv7 pipeline takes a telescope image as input and outputs bounding boxes
 
 The authors compiled a dataset of 4,696 annotated images, drawn from real telescope sessions using Vespera and Stellina instruments. Each image had to be manually labelled and bounding boxes had to be drawn around DSOs. 
 
-1.  **Transfer Learning for YOLOv7** 
+2.  **Transfer Learning for YOLOv7** 
     
 
 Instead of training from scratch, the model was built using transfer learning starting from a pre-trained YOLOv7 model and fine-tuning it on the custom dataset. This significantly reduced training time while improving convergence and performance on astronomy-specific features. 
 
-1.  **Training Parameters** 
+3.  **Training Parameters** 
     
-2.  Batch size: 4 
+*    Batch size: 4 
     
-3.  Image size: 608×608 pixels 
+*    Image size: 608×608 pixels 
     
-4.  Epochs: 200 
+*    Epochs: 200 
     
-5.  Optimizer: Adam 
+*    Optimizer: Adam 
     
-6.  Framework: PyTorch with YOLOv7 official implementation 
+*    Framework: PyTorch with YOLOv7 official implementation 
     
 
 **Results & Performance** 
 
-*   **Precision**: 0.79 
-    
-*   **Recall**: 0.51 
-    
-*   **F1-Score**: ~0.62 
+| Metric     | Value  |
+|------------|--------|
+| Precision  | 0.79   |
+| Recall     | 0.51   |
+| F1-Score   | ~0.62  |
     
 
 This was the best-performing model among all approaches tested, delivering clean bounding boxes around DSOs  even in moderately noisy, light-polluted images. 
