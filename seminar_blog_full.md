@@ -185,15 +185,15 @@ _The YOLOv7 pipeline takes a telescope image as input and outputs bounding boxes
 
 <li><b>Training Parameters</b></li>
     
-*    Batch size: 4 
+<ul><li>Batch size: 4 </li>
     
-*    Image size: 608×608 pixels 
+<li>Image size: 608×608 pixels </li>
+
+<li>Epochs: 200 </li>
     
-*    Epochs: 200 
+<li>Optimizer: Adam </li>
     
-*    Optimizer: Adam 
-    
-*    Framework: PyTorch with YOLOv7 official implementation 
+<li> Framework: PyTorch with YOLOv7 official implementation </li></ul>
     
 </ol>
 **Performance** 
@@ -539,4 +539,3 @@ With improvements in model generalization, dataset diversity and computational e
 *   **Astroinformatics Overview**  Intro to data science and AI in astronomy.  Wikipedia: [Astroinformatics](https://en.wikipedia.org/wiki/Astroinformatics) 
     
 *   **YOLO Object Detection in Astronomy**  Foundational approach for real-time object detection applied to sky imagery.  A&A YOLO Study  [Original YOLO Paper (arXiv)](https://arxiv.org/abs/1506.02640)
-</p>
