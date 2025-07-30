@@ -27,7 +27,7 @@ These issues underscore the need for intelligent, real-time DSO detection and an
 
 **High-Level Implementation of Deep Learning in DSO Detection** 
 
- ![Alt text](./figure1.png)
+![Alt text](./figure1.png)
 <div style="text-align: center;">This diagram outlines the conceptual flow of how deep learning turns raw telescope imagery into actionable insights, accessible even to non-experts.</div>
 
 **Step 1: Raw Telescope Image** 
