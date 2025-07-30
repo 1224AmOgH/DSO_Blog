@@ -29,7 +29,7 @@ These issues underscore the need for intelligent, real-time DSO detection and an
 
  
 
-![](./%231.png)
+![](https://github.com/1224AmOgH/DSO_Blog/blob/main/%231.png)
 <div style="text-align: center;">This diagram outlines the conceptual flow of how deep learning turns raw telescope imagery into actionable insights, accessible even to non-experts.</div>
 
 **Step 1: Raw Telescope Image** 
