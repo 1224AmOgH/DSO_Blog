@@ -29,8 +29,8 @@ These issues underscore the need for intelligent, real-time DSO detection and an
 
 This diagram outlines the conceptual flow of how deep learning turns raw telescope imagery into actionable insights, accessible even to non-experts. 
 
-![](https://raw.githubusercontent.com/1224AmOgH/DSO_Blog/main/%232.png)
-![](./%232.png)
+![](https://raw.githubusercontent.com/1224AmOgH/DSO_Blog/main/%231.png)
+![](./%231.png)
 <div style="text-align: center;">Figure 3: Secondary structure comparison </div>
 
 **Step 1: Raw Telescope Image** 
