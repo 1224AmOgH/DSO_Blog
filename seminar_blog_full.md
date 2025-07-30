@@ -30,7 +30,7 @@ These issues underscore the need for intelligent, real-time DSO detection and an
 This diagram outlines the conceptual flow of how deep learning turns raw telescope imagery into actionable insights, accessible even to non-experts. 
 
 
-![](./%232.png)
+![](./%231.png)
 <div style="text-align: center;">Figure 3: Secondary structure comparison </div>
 
 **Step 1: Raw Telescope Image** 
@@ -137,9 +137,9 @@ Any distinct non-stellar feature identified in the image is boxed using OpenCV f
 
 These bounding boxes are then drawn back onto the original image, highlighting where DSOs were found. 
 
-**Results:**  
+**Results:** 
 
-![Alt text](https://github.com/1224AmOgH/DSO_Blog/blob/main/%232.png)
+![](./%232.png)
 
 _StarNet removes stars (left), and classic CV methods detect potential DSOs (right). Red boxes mark regions identified as non-stellar features using edge detection and OpenCV_ 
 
@@ -166,7 +166,8 @@ This method may be helpful for quick demos or rough filtering, especially if com
 
 **How It Was Implemented** 
 
-![Alt text](https://github.com/1224AmOgH/DSO_Blog/blob/main/%233.png)
+
+![](./%233.png)
 
 _The YOLOv7 pipeline takes a telescope image as input and outputs bounding boxes identifying Deep Sky Objects (DSOs) in real time._ 
 
@@ -206,7 +207,7 @@ This was the best-performing model among all approaches tested, delivering clean
 
 **Result:**  
 
-![Alt text](https://github.com/1224AmOgH/DSO_Blog/blob/main/%234.png)
+![](./%234.png)
 
 *A wide-field image of Messier 49 (a galaxy in the Virgo cluster) showed clear, annotated boxes over the primary target and surrounding galaxies—visible even to non-expert viewers.*
 
@@ -232,7 +233,8 @@ This was the best-performing model among all approaches tested, delivering clean
 While YOLOv7 excels at spotting DSOs, it acts like a “black box” you get bounding boxes, but no insight into how the model arrived at that result. This is where Explainable AI (XAI) comes in. In this technique, a deep learning classifier detects whether a DSO is present in an image, and then XRAI (a post-hoc explainability tool) generates a heatmap showing which parts of the image contributed most to that decision. 
 
 **How It Works** 
-![Alt text](https://github.com/1224AmOgH/DSO_Blog/blob/main/%235.png)
+
+![](./%235.png)
 
 _This pipeline classifies telescope images using ResNet50 and, if a DSO is detected, provides an interpretable explanation for accessible understanding._ 
 
@@ -301,14 +303,11 @@ While slightly less precise than YOLOv7, it provides something YOLO cannot: visu
 
   **Results** 
 
-  ![Alt text](https://github.com/1224AmOgH/DSO_Blog/blob/main/%236.png)
+  ![](./%236.png)
+  
   *   The core of Messier 13 (globular cluster)
     
- ![Alt text](https://github.com/1224AmOgH/DSO_Blog/blob/main/%237.png)
-    
-
-
-    
+ ![](./%237.png)
 
 *   The faint glow of **Messier 76 (Little Dumbbell Nebula)** 
     
@@ -384,7 +383,7 @@ For example, an image of Messier 17 (Omega Nebula) processed with Pix2Pix produc
     
 *   **No object labeling**: It shows _where_ the DSO is, but not _what_ it is.
 
-    ![Alt text](https://github.com/1224AmOgH/DSO_Blog/blob/main/%238.png)
+    ![](./%238.png)
     
 
 **Summary** 
