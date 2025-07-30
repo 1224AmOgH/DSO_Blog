@@ -113,22 +113,22 @@ The first method tested is simple yet creative approach: remove distracting star
     
 StarNet is a pre-trained deep learning model designed to remove stars from astronomical images. It outputs an image with only the background content typically nebulae, galaxies, or clusters. 
 
-<li>**Convert to Grayscale** </li>
+<li><b>Convert to Grayscale</b></li>
     
 
 The star-removed image is simplified to a grayscale version, making it easier to detect edges and contours. 
 
-<li>**Edge Detection with Canny Filter** </li>
+<li><b>Edge Detection with Canny Filter</b> </li>
     
 
 A standard CV technique (Canny edge detection) is used to find the boundaries of objects. 
 
-<li>**Bounding Box Calculation**</li>
+<li><b>Bounding Box Calculation</b></li>
     
 
 Any distinct non-stellar feature identified in the image is boxed using OpenCV functions. 
 
-<li>**Overlay Results** </li>
+<li><b>Overlay Results</b></li>
     
 
 These bounding boxes are then drawn back onto the original image, highlighting where DSOs were found. 
@@ -169,18 +169,18 @@ This method may be helpful for quick demos or rough filtering, especially if com
 <div style="text-align: center;">The YOLOv7 pipeline takes a telescope image as input and outputs bounding boxes identifying Deep Sky Objects (DSOs) in real time.</div>
 
 _The YOLOv7 pipeline takes a telescope image as input and outputs bounding boxes identifying Deep Sky Objects (DSOs) in real time._ 
-
-1.  **Dataset Creation** – DeepSpaceYoloDataset 
+<ol>
+<li><b>Dataset Creation** – DeepSpaceYoloDataset</b></li>
     
 
 The authors compiled a dataset of 4,696 annotated images, drawn from real telescope sessions using Vespera and Stellina instruments. Each image had to be manually labelled and bounding boxes had to be drawn around DSOs. 
 
-2.  **Transfer Learning for YOLOv7** 
+<li><b>Transfer Learning for YOLOv7</b></li>
     
 
 Instead of training from scratch, the model was built using transfer learning starting from a pre-trained YOLOv7 model and fine-tuning it on the custom dataset. This significantly reduced training time while improving convergence and performance on astronomy-specific features. 
 
-3.  **Training Parameters** 
+<li><b>Training Parameters</b></li>
     
 *    Batch size: 4 
     
@@ -192,8 +192,8 @@ Instead of training from scratch, the model was built using transfer learning st
     
 *    Framework: PyTorch with YOLOv7 official implementation 
     
-
-**Results & Performance** 
+</ol>
+**Performance** 
 
 | Metric     | Value  |
 |------------|--------|
