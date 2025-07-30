@@ -108,18 +108,17 @@ Now that we have established the motivation and the data behind this research, w
 The first method tested is simple yet creative approach: remove distracting stars from the image using a tool called StarNet and then apply classic computer vision (CV) techniques. The idea here was to strip out the stars first and then isolate what might be celestial objects of interest. 
 
 **How It Works – Step by Step** 
-
-1.  **Apply StarNet** 
+<ol>
+<li>1.  **Apply StarNet** </li>
     
-
 StarNet is a pre-trained deep learning model designed to remove stars from astronomical images. It outputs an image with only the background content typically nebulae, galaxies, or clusters. 
 
-2.  **Convert to Grayscale** 
+<li>2.  **Convert to Grayscale** </li>
     
 
 The star-removed image is simplified to a grayscale version, making it easier to detect edges and contours. 
 
-3.  **Edge Detection with Canny Filter** 
+<li>3.  **Edge Detection with Canny Filter** </li>
     
 
 A standard CV technique (Canny edge detection) is used to find the boundaries of objects. 
@@ -133,6 +132,7 @@ Any distinct non-stellar feature identified in the image is boxed using OpenCV f
     
 
 These bounding boxes are then drawn back onto the original image, highlighting where DSOs were found. 
+</ol>
 
 **Results:** 
 
