@@ -27,10 +27,10 @@ These issues underscore the need for intelligent, real-time DSO detection and an
 
 **High-Level Implementation of Deep Learning in DSO Detection** 
 
-This diagram outlines the conceptual flow of how deep learning turns raw telescope imagery into actionable insights, accessible even to non-experts. 
+ 
 
 ![](./%231.png)
-<div style="text-align: center;">Figure 3: Secondary structure comparison </div>
+<div style="text-align: center;">This diagram outlines the conceptual flow of how deep learning turns raw telescope imagery into actionable insights, accessible even to non-experts.</div>
 
 **Step 1: Raw Telescope Image** 
 
@@ -139,6 +139,7 @@ These bounding boxes are then drawn back onto the original image, highlighting w
 **Results:** 
 
 ![](./%232.png)
+<div style="text-align: center;">StarNet removes stars (left), and classic CV methods detect potential DSOs (right). Red boxes mark regions identified as non-stellar features using edge detection and OpenCV</div>
 
 _StarNet removes stars (left), and classic CV methods detect potential DSOs (right). Red boxes mark regions identified as non-stellar features using edge detection and OpenCV_ 
 
@@ -167,6 +168,7 @@ This method may be helpful for quick demos or rough filtering, especially if com
 
 
 ![](./%233.png)
+<div style="text-align: center;">The YOLOv7 pipeline takes a telescope image as input and outputs bounding boxes identifying Deep Sky Objects (DSOs) in real time.</div>
 
 _The YOLOv7 pipeline takes a telescope image as input and outputs bounding boxes identifying Deep Sky Objects (DSOs) in real time._ 
 
@@ -207,6 +209,7 @@ This was the best-performing model among all approaches tested, delivering clean
 **Result:**  
 
 ![](./%234.png)
+<div style="text-align: center;">A wide-field image of Messier 49 (a galaxy in the Virgo cluster) showed clear, annotated boxes over the primary target and surrounding galaxies—visible even to non-expert viewers.</div>
 
 *A wide-field image of Messier 49 (a galaxy in the Virgo cluster) showed clear, annotated boxes over the primary target and surrounding galaxies—visible even to non-expert viewers.*
 
