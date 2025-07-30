@@ -114,22 +114,22 @@ The first method tested is simple yet creative approach: remove distracting star
 
 StarNet is a pre-trained deep learning model designed to remove stars from astronomical images. It outputs an image with only the background content typically nebulae, galaxies, or clusters. 
 
-1.  **Convert to Grayscale** 
+2.  **Convert to Grayscale** 
     
 
 The star-removed image is simplified to a grayscale version, making it easier to detect edges and contours. 
 
-1.  **Edge Detection with Canny Filter** 
+3.  **Edge Detection with Canny Filter** 
     
 
 A standard CV technique (Canny edge detection) is used to find the boundaries of objects. 
 
-1.  **Bounding Box Calculation** 
+4.  **Bounding Box Calculation** 
     
 
 Any distinct non-stellar feature identified in the image is boxed using OpenCV functions. 
 
-1.  **Overlay Results** 
+5.  **Overlay Results** 
     
 
 These bounding boxes are then drawn back onto the original image, highlighting where DSOs were found. 
