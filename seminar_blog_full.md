@@ -505,41 +505,21 @@ Despite strong results, certain astronomical features remain hard to distinguish
 
 To enhance both classification accuracy and interpretability, several upgrades are envisioned: 
 
-*   **Model Fine-Tuning** 
-    
+*   **Model Fine-Tuning:**  Adjusting parameters such as learning rate, batch size, and optimizer settings can optimize training convergence and accuracy. 
 
-  Adjusting parameters such as learning rate, batch size, and optimizer settings can optimize training convergence and accuracy. 
+*   **Architectural Enhancements:** Exploring deeper or more efficient networks like ResNet101 or EfficientNet may improve feature extraction, especially for subtle or diffuse DSOs. 
 
-*   **Architectural Enhancements** 
-    
+*   **Dataset Refinement:** Removing mislabeled or low-quality samples and ensuring class balance will increase training signal clarity and reduce false positives. 
 
-  Exploring deeper or more efficient networks like ResNet101 or EfficientNet may improve feature extraction, especially for subtle or diffuse DSOs. 
-
-*   **Dataset Refinement** 
-    
-  
-  Removing mislabeled or low-quality samples and ensuring class balance will increase training signal clarity and reduce false positives. 
-
-*   **Advanced Explainability Tools** 
-    
-
-  Incorporating attention-based XAI methods like Grad-CAM++ could offer sharper, more localized heatmaps, further improving model transparency and DSO pinpointing. 
+*   **Advanced Explainability Tools:** Incorporating attention-based XAI methods like Grad-CAM++ could offer sharper, more localized heatmaps, further improving model transparency and DSO pinpointing. 
 
 **Improving Technique 2: YOLOv7 Object Detection** 
 
-  For real-time object detection, the next steps include: 
+For real-time object detection, the next steps include: 
 
-*   **Multi-Class Training** 
-    
+*   **Multi-Class Training:** Rather than treating all DSOs as a single class, future models can distinguish between galaxies, clusters, and nebulae, offering richer annotations and educational value. 
 
-  Rather than treating all DSOs as a single class, future models can distinguish between galaxies, clusters, and nebulae, offering richer annotations and educational value. 
-
-*   **Data Augmentation** 
-    
-
-<p style="text-align: justify;"> Introducing variations (e.g., blurring, noise injection, brightness shifts) during training can help models generalize better—especially in noisy or underexposed conditions common in urban or short-exposure setups. 
-
-By advancing both classification and detection pathways, future systems will not only be faster and more accurate but also more informative, interpretable, and resilient across diverse sky-watching scenarios. </p>
+*   **Data Augmentation:** <p style="text-align: justify;"> Introducing variations (e.g., blurring, noise injection, brightness shifts) during training can help models generalize better—especially in noisy or underexposed conditions common in urban or short-exposure setups. By advancing both classification and detection pathways, future systems will not only be faster and more accurate but also more informative, interpretable, and resilient across diverse sky-watching scenarios. </p>
 
 <hr class="fancy-line">
 <h2>Conclusion </h2>
