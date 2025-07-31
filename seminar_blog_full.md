@@ -1,13 +1,11 @@
 <style>
-<css>
 hr.fancy-line {
   border: 0;
   height: 1px;
   background: linear-gradient(to right, transparent, #999, transparent);
   margin: 2em 0;
 }
-</css>
-  </style>
+</style>
 
 <h2>Introduction</h2>
 
