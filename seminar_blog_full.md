@@ -28,13 +28,8 @@ But despite this leap forward, a new problem emerged while smart telescopes prod
 <p style="text-align: justify;">Despite making stargazing more accessible and visually engaging, EAA still faces key challenges—especially in automated Deep Sky Object (DSO) identification: 
 <ol>
 <li><b>Image Ambiguity</b>  Faint DSOs often blend into the background, particularly under light-polluted or moonlit skies, making them hard to distinguish from stars or noise.</li> 
-    
 <li><b> No Real-Time Feedback</b>  Most smart telescopes do not confirm if the target was captured, requiring manual checks or post-processing, which reduces interactivity and may lead to missed objects.</li>
-
-
 <li><b>Environmental Sensitivity</b> Weather, light pollution and seasonal factors heavily influence image quality. Without real-time detection, users may unknowingly capture unusable data.</li>
-
-
 <li><b>Lack of Object Annotation</b> Consumer telescopes rarely label or identify captured objects, limiting scientific value and user understanding </li></ol>
     
 
