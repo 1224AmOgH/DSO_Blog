@@ -19,10 +19,10 @@ But despite this leap forward, a new problem emerged while smart telescopes prod
 <ol>
 <li><b>Image Ambiguity</b>  Faint DSOs often blend into the background, particularly under light-polluted or moonlit skies, making them hard to distinguish from stars or noise.</li> 
     
-<li><b> No Real-Time Feedback</b>  Most smart telescopes do not confirm if the target was captured, requiring manual checks or post-processing, which reduces interactivity and may lead to missed objects.</li> 
-    
+<li><b> No Real-Time Feedback</b>  Most smart telescopes do not confirm if the target was captured, requiring manual checks or post-processing, which reduces interactivity and may lead to missed objects.</li>
+
 <li><b>Environmental Sensitivity</b> Weather, light pollution and seasonal factors heavily influence image quality. Without real-time detection, users may unknowingly capture unusable data.</li>
-    
+
 <li><b>Lack of Object Annotation</b> Consumer telescopes rarely label or identify captured objects, limiting scientific value and user understanding </li></ol>
     
 
@@ -115,22 +115,26 @@ This bridges the gap between data and understanding, helping the user understand
 <ol>
 <li> <b>Apply StarNet</b> </li>
     
-StarNet is a pre-trained deep learning model designed to remove stars from astronomical images. It outputs an image with only the background content typically nebulae, galaxies, or clusters. 
+StarNet is a pre-trained deep learning model designed to remove stars from astronomical images. It outputs an image with only the background content typically nebulae, galaxies or clusters. 
+
 
 <li><b>Convert to Grayscale</b></li>
     
 
 The star-removed image is simplified to a grayscale version, making it easier to detect edges and contours. 
 
+
 <li><b>Edge Detection with Canny Filter</b> </li>
     
 
 A standard CV technique (Canny edge detection) is used to find the boundaries of objects. 
 
+
 <li><b>Bounding Box Calculation</b></li>
     
 
 Any distinct non-stellar feature identified in the image is boxed using OpenCV functions. 
+
 
 <li><b>Overlay Results</b></li>
     
@@ -142,7 +146,7 @@ These bounding boxes are then drawn back onto the original image, highlighting w
 
 ![](./figure2.png)
 
-<p style="text-align: centre;"> _StarNet removes stars (left), and classic CV methods detect potential DSOs (right). Red boxes mark regions identified as non-stellar features using edge detection and OpenCV_ </p>
+<p style="text-align: centre;"> StarNet removes stars (left), and classic CV methods detect potential DSOs (right). Red boxes mark regions identified as non-stellar features using edge detection and OpenCV </p>
 
 **Limitations** 
 
@@ -170,7 +174,7 @@ Despite being fast and requiring no training data, this technique has limited pr
 
 ![](./figure3.png)
 
-<p style="text-align: centre;">_The YOLOv7 pipeline takes a telescope image as input and outputs bounding boxes identifying Deep Sky Objects (DSOs) in real time._ </p>
+<p style="text-align: centre;">The YOLOv7 pipeline takes a telescope image as input and outputs bounding boxes identifying Deep Sky Objects (DSOs) in real time. </p>
 <ol>
 <li><b>Dataset Creation** – DeepSpaceYoloDataset</b></li>
     
@@ -180,7 +184,7 @@ Despite being fast and requiring no training data, this technique has limited pr
 <li><b>Transfer Learning for YOLOv7</b></li>
     
 
-<p>Instead of training from scratch, the model was built using transfer learning starting from a pre-trained YOLOv7 model and fine-tuning it on the custom dataset. This significantly reduced training time while improving convergence and performance on astronomy-specific features. </p>
+<p style="text-align: justify;">Instead of training from scratch, the model was built using transfer learning starting from a pre-trained YOLOv7 model and fine-tuning it on the custom dataset. This significantly reduced training time while improving convergence and performance on astronomy-specific features. </p>
 
 <li><b>Training Parameters</b></li>
     
@@ -217,7 +221,7 @@ This was the best-performing model among all approaches tested, delivering clean
 
 *   **Fast Inference**: Real-time performance during stargazing sessions. 
     
-*   **Reliable on Common Targets**: Particularly accurate with bright galaxies, nebulae, and clusters from catalogs like Messier or NGC. 
+*   **Reliable on Common Targets**: Particularly accurate with bright galaxies, nebulae and clusters from catalogs like Messier or NGC. 
     
 *   **Scalable**: Can be retrained for other sky regions or telescope types. 
     
@@ -239,28 +243,26 @@ This was the best-performing model among all approaches tested, delivering clean
 
 ![](./figure5.png)
 
-<p style="text-align: centre;">_This pipeline classifies telescope images using ResNet50 and, if a DSO is detected, provides an interpretable explanation for accessible understanding._ </p>
+<p style="text-align: centre;">This pipeline classifies telescope images using ResNet50 and, if a DSO is detected, provides an interpretable explanation for accessible understanding.</p>
 
 1.  **Binary Classification with ResNet50** 
     
-
-<p style="text-align: justify;">Images are first fed into a **ResNet50** model—a powerful convolutional neural network that learns to answer a simple question: _Is a DSO present in this image?_  The dataset used here was balanced between images with and without DSOs, with careful labeling to avoid bias. </p>
+    <p style="text-align: justify;">Images are first fed into a <b>ResNet50</b> model—a powerful convolutional neural network that learns to answer a simple question: Is a DSO present in this image?  The dataset used here was balanced between images with and without DSOs, with careful labeling to avoid bias. </p>
 
 2.  **Explainability with XRAI** 
     
 
-<p style="text-align: justify;"> Once the model classifies an image as “DSO present,” **XRAI** (a technique based on Integrated Gradients) kicks in to highlight _where_ in the image the most influential features are. These show up as a **heatmap overlay**, revealing the “attention zones” the model focused on. </p>
+    <p style="text-align: justify;"> Once the model classifies an image as “DSO present,” <b>XRAI</b>(a technique based on Integrated Gradients) kicks in to highlight where in the image the most influential features are. These show up as a <b>heatmap overlay</b>, revealing the “attention zones” the model focused on. </p>
 
 
 3.  **Integrated Gradients as a Foundation** 
     
 
-<p style="text-align: justify;"> XRAI builds on a technique called Integrated Gradients, which estimates how much each pixel contributes to the model’s final output. It does this by comparing the real image to a “baseline” (typically a black image representing sky background) and measuring how predictions change as the image morphs from the baseline to the real input. </p>
+    <p style="text-align: justify;"> XRAI builds on a technique called Integrated Gradients, which estimates how much each pixel contributes to the model’s final output. It does this by comparing the real image to a “baseline” (typically a black image representing sky background) and measuring how predictions change as the image morphs from the baseline to the real input. </p>
 
 4.  **Region Segmentation** 
     
-
- <p style="text-align: justify;"> Instead of analyzing pixels individually, XRAI groups pixels into superpixels coherent regions of the image—like the bright core of a galaxy or the wispy edges of a nebula. </p>
+    <p style="text-align: justify;"> Instead of analyzing pixels individually, XRAI groups pixels into superpixels coherent regions of the image—like the bright core of a galaxy or the wispy edges of a nebula. </p>
 
 5.  **Attribution Scoring** 
     
@@ -270,7 +272,7 @@ This was the best-performing model among all approaches tested, delivering clean
 6.  **Heatmap Generation** 
     
 
-<p style="text-align: justify;"> The regions with the highest cumulative contribution are overlaid as heatmaps, allowing you to visualize where the model “looked” when it decided that a DSO was present. 
+    <p style="text-align: justify;"> The regions with the highest cumulative contribution are overlaid as heatmaps, allowing you to visualize where the model “looked” when it decided that a DSO was present. 
 
 So, when you see a bright blue blob on an XRAI map, you are essentially seeing where the model focused its attention the most influential pixels in the decision-making process. </p>
 
@@ -280,11 +282,11 @@ So, when you see a bright blue blob on an XRAI map, you are essentially seeing w
     
 *   **Precision/Recall** (via heatmap bounding boxes): 
     
-*   Precision: ~0.68 
+*   **Precision:** ~0.68 
     
-*   Recall: ~0.41 
+*   **Recall:** ~0.41 
     
-*   F1-Score: ~0.51 
+*   **F1-Score:** ~0.51 
     
 
 While slightly less precise than YOLOv7, it provides something YOLO cannot: visual explainability. 
@@ -304,6 +306,7 @@ While slightly less precise than YOLOv7, it provides something YOLO cannot: visu
     
 *   **Model development**: Identifying failure points and refining detection strategies.
 
+
   **Results** 
 
 ![](./figure6.png)
@@ -312,7 +315,7 @@ While slightly less precise than YOLOv7, it provides something YOLO cannot: visu
     
 ![](./figure7.png)
 
-<p style="text-align: centre;"> The faint glow of **Messier 76 (Little Dumbbell Nebula)</p>
+<p style="text-align: centre;"> The faint glow of Messier 76 (Little Dumbbell Nebula)</p>
     
 
 **Technique 4: Fast DSO Highlighting with Pix2Pix GAN** 
