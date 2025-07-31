@@ -1,12 +1,12 @@
 <style>
-
+<css>
 hr.fancy-line {
   border: 0;
   height: 1px;
   background: linear-gradient(to right, transparent, #999, transparent);
   margin: 2em 0;
 }
-
+</css>
   </style>
 
 <h2>Introduction</h2>
@@ -460,7 +460,6 @@ With thousands of images generated during observation sessions, manually reviewi
 <hr class="fancy-line">
 <h2>Limitations of Deep Learning in EAA</h2>
 
-
 <p style="text-align: justify;">While deep learning brings significant advancements to smart astronomy, it's not without constraints. Understanding these limitations is crucial for deploying models effectively and improving them further.</p> 
 
 **1\. Dataset Scope & Generalization** 
@@ -496,8 +495,9 @@ Despite strong results, certain astronomical features remain hard to distinguish
 
 <p style="text-align: justify;">There is currently no universally accepted benchmark for evaluating deep learning models on smart telescope data which makes it hard to compare methods across research groups. Performance metrics can vary significantly based on dataset quality, preprocessing choices, and evaluation criteria. </p>
 
-<h2>**Future Work:** </h2>
 <hr class="fancy-line">
+<h2>Future Work</h2>
+
 
 <p style="text-align: justify;">While the current techniques show promise, there is ample room for improvement. Future efforts can focus on both refining existing models and expanding their capabilities to meet the demands of more diverse use cases. </p>
 
