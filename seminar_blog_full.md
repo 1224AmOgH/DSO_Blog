@@ -21,7 +21,9 @@ But despite this leap forward, a new problem emerged while smart telescopes prod
     
 <li><b> No Real-Time Feedback</b>  Most smart telescopes do not confirm if the target was captured, requiring manual checks or post-processing, which reduces interactivity and may lead to missed objects.</li>
 
+
 <li><b>Environmental Sensitivity</b> Weather, light pollution and seasonal factors heavily influence image quality. Without real-time detection, users may unknowingly capture unusable data.</li>
+
 
 <li><b>Lack of Object Annotation</b> Consumer telescopes rarely label or identify captured objects, limiting scientific value and user understanding </li></ol>
     
