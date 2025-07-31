@@ -252,6 +252,7 @@ This was the best-performing model among all approaches tested, delivering clean
     
 
 **Technique 3: DSO Classification with ResNet50 and Explainable AI (XRAI)** 
+<hr class="fancy-line">
 
 **Overview**
 
@@ -337,6 +338,7 @@ While slightly less precise than YOLOv7, it provides something YOLO cannot: visu
     
 
 **Technique 4: Fast DSO Highlighting with Pix2Pix GAN** 
+<hr class="fancy-line">
 
 **Overview** 
 
@@ -413,6 +415,7 @@ Its job is to critique the Generator and call out any inaccuracies or oddities i
     
 
 **Summary** 
+<hr class="fancy-line">
 
 <p style="text-align: justify;">Each deep learning technique explored in this study brings distinct strengths tailored to different use cases in Electronically Assisted Astronomy. The <b>StarNet + CV</b> approach offers a quick and simple baseline but struggles with accuracy and noise. <b>YOLOv7</b> stands out as the most robust and balanced model, delivering high precision and real-time detection making it ideal for both automation and outreach. <b>ResNet50 + XRAI</b> trades speed for deep interpretability, offering rich visual insights into model reasoning, which is especially valuable for educational and scientific transparency. Finally, the <b>Pix2Pix GAN</b> cleverly mimics XRAI's outputs at a fraction of the cost, providing fast visual feedback for user-friendly applications. Together, these models represent a powerful toolkit, capable of transforming smart telescopes from passive imaging devices into intelligent, interactive observatories.</p>
 
@@ -426,6 +429,7 @@ Its job is to critique the Generator and call out any inaccuracies or oddities i
 | F1 Score      | 0.62 (Best)                           | 0.51                                  | Not directly comparable (PSNR >38)   |
 
 **Applications of Deep Learning in EAA** 
+<hr class="fancy-line">
 
 <p style="text-align: justify;">Deep learning is not just an add-on to EAA—it is a force multiplier that unlocks new levels of autonomy, scalability, and accessibility. Here are some impactful ways DL enhances the practice of astronomy: </p>
 
@@ -449,6 +453,7 @@ With thousands of images generated during observation sessions, manually reviewi
 <p style="text-align: justify;">Deep learning models are often criticized as "black boxes," but Explainable AI tools like XRAI change that narrative. By showing why a model detected a certain region as containing a DSO, these visualizations help in building user trust and educate beginners understand astronomy </p>
 
 **Limitations of Deep Learning in EAA** 
+<hr class="fancy-line">
 
 <p style="text-align: justify;">While deep learning brings significant advancements to smart astronomy, it's not without constraints. Understanding these limitations is crucial for deploying models effectively and improving them further.</p> 
 
@@ -530,6 +535,7 @@ Rather than treating all DSOs as a single class, future models can distinguish b
 By advancing both classification and detection pathways, future systems will not only be faster and more accurate but also more informative, interpretable, and resilient across diverse sky-watching scenarios. </p>
 
 **Conclusion** 
+<hr class="fancy-line">
 
 <p style="text-align: justify;">Deep learning is transforming Electronically Assisted Astronomy (EAA) from a passive imaging experience into an intelligent, interactive process. This work shows that even consumer-grade telescopes, when paired with models like YOLOv7, ResNet50 + XRAI, and Pix2Pix GAN can detect, highlight and explain Deep Sky Objects in real-time or near-real-time. 
 
@@ -538,6 +544,7 @@ Each technique brings unique value—YOLOv7 leads in detection performance, ResN
 With improvements in model generalization, dataset diversity and computational efficiency, the path forward is clear: deep learning will not only help us look at the stars, but truly understand them. </p>
 
 **References for Blog on Deep Sky Object Detection in EAA** 
+<hr class="fancy-line">
 
 **Research Papers & Articles** 
 
