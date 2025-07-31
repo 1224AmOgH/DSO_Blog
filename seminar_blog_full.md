@@ -12,6 +12,7 @@ With the growth of smart telescopes capable of Electronically Assisted Astronomy
 
 
 **Background: From Eyepieces to Algorithms** 
+<hr class="fancy-line">
 
 <p style="text-align: justify;">Stargazing has long been a pursuit of patience and perseverance. Historically, even viewing well-known deep sky objects like the Andromeda Galaxy or Orion Nebula demanded clear skies, remote locations and hours of manual setup. Observers had to contend with cold nights, light pollution and complex equipment—mounts, eyepieces, filters and tracking systems—all of which required expertise to operate. 
 
@@ -21,6 +22,7 @@ But despite this leap forward, a new problem emerged while smart telescopes prod
 
 
 **Current Limitations in Electronically Assisted Astronomy** 
+<hr class="fancy-line">
 
 <p style="text-align: justify;">Despite making stargazing more accessible and visually engaging, EAA still faces key challenges—especially in automated Deep Sky Object (DSO) identification: 
 <ol>
@@ -38,6 +40,7 @@ But despite this leap forward, a new problem emerged while smart telescopes prod
 These issues underscore the need for intelligent, real-time DSO detection and annotation using deep learning to improve efficiency and user experience. </p>
 
 **High-Level Implementation of Deep Learning in DSO Detection** 
+<hr class="fancy-line">
 
 ![Alt text](./figure1.png)
 <div style="text-align: center;">This diagram outlines the conceptual flow of how deep learning turns raw telescope imagery into actionable insights, accessible even to non-experts.</div>
@@ -92,6 +95,7 @@ Now, you can easily understand 
 This bridges the gap between data and understanding, helping the user understand data. 
 
 **Data Collection: Ground Truth from the Backyard Sky** 
+<hr class="fancy-line">
 
 <p style="text-align: justify;"> The training data used in this study was captured using consumer-grade smart telescopes—specifically the Stellina and Vespera in real-world conditions across Luxembourg, France and Belgium. Over 50,000 raw FITS images and nearly 5,000 post-processed JPEG images were gathered during these sessions, often under light-polluted skies and variable weather. This dataset, featuring more than 250 different targets visible from the Northern Hemisphere.</p>
 
@@ -102,6 +106,7 @@ This bridges the gap between data and understanding, helping the user understand
 
 
 **Diving into the Detection Techniques** 
+<hr class="fancy-line">
 
 <p style="text-align: justify;"> Now that we have established the motivation and the data behind this research, we will dive into the four key deep learning techniques implemented to tackle the challenge of Deep Sky Object detection. Each approach brings a unique blend of speed, accuracy and interpretability. These include: </p>
 
@@ -115,6 +120,7 @@ This bridges the gap between data and understanding, helping the user understand
     
 
 **Technique 1: Naive Detection Using StarNet + Computer Vision** 
+<hr class="fancy-line">
 
 **Overview** 
 
@@ -173,6 +179,7 @@ Despite being fast and requiring no training data, this technique has limited pr
 <p style="text-align: justify;"> This method may be helpful for quick demos or rough filtering, especially if computational resources are limited. However, it lacks the robustness and interpretability needed for broader use making it a good baseline to compare against smarter models. </p>
 
 **Technique 2: Object Detection with a Custom YOLOv7 Model** 
+<hr class="fancy-line">
 
 **Overview** 
 
