@@ -1,12 +1,12 @@
 
 **Introduction**
 <p style="text-align: justify;">
-With the growth of smart telescopes capable of Electronically Assisted Astronomy (EAA), astronomy is becoming more accessible to hobbyists and the public. Yet, detecting faint galaxies, nebulae and clusters in light-polluted skies remains a persistent challenge. The paper _"Deep Sky Objects Detection with Deep Learning for Electronically Assisted Astronomy"_ by Parisot & Jaziri tackles this head-on—crafting deep learning (DL) solutions that help in real-time detection of celestial wonders. In this blog, we discover and explore a range of deep learning techniques developed for detecting Deep Sky Objects (DSOs) in images captured by smart telescopes and provide a glimpse into how each technique works and reflect on their possible real-world applications. </p>
+With the growth of smart telescopes capable of Electronically Assisted Astronomy (EAA), astronomy is becoming more accessible to hobbyists and the public. Yet, detecting faint galaxies, nebulae and clusters in light-polluted skies remains a persistent challenge. The paper <b>"Deep Sky Objects Detection with Deep Learning for Electronically Assisted Astronomy"</b> by Parisot & Jaziri tackles this head-on—crafting deep learning (DL) solutions that help in real-time detection of celestial wonders. In this blog, we discover and explore a range of deep learning techniques developed for detecting Deep Sky Objects (DSOs) in images captured by smart telescopes and provide a glimpse into how each technique works and reflect on their possible real-world applications. </p>
 
 
 **Background: From Eyepieces to Algorithms** 
 
-<p style="text-align: justify;">Stargazing has long been a pursuit of patience and perseverance. Historically, even viewing well-known deep sky objects like the Andromeda Galaxy or Orion Nebula demanded clear skies, remote locations, and hours of manual setup. Observers had to contend with cold nights, light pollution and complex equipment—mounts, eyepieces, filters and tracking systems—all of which required expertise to operate. 
+<p style="text-align: justify;">Stargazing has long been a pursuit of patience and perseverance. Historically, even viewing well-known deep sky objects like the Andromeda Galaxy or Orion Nebula demanded clear skies, remote locations and hours of manual setup. Observers had to contend with cold nights, light pollution and complex equipment—mounts, eyepieces, filters and tracking systems—all of which required expertise to operate. 
 
 Enter Electronically Assisted Astronomy (EAA), this modern approach revolutionized astronomy by replacing the eyepiece with a digital sensor. EAA-enabled smart telescopes like Stellina and Vespera allow users to capture and stack images of nebulae and galaxies in real-time, even from urban settings. 
 
@@ -16,14 +16,14 @@ But despite this leap forward, a new problem emerged while smart telescopes prod
 **Current Limitations in Electronically Assisted Astronomy** 
 
 <p style="text-align: justify;">Despite making stargazing more accessible and visually engaging, EAA still faces key challenges—especially in automated Deep Sky Object (DSO) identification: 
-
-1.  **Image Ambiguity**  Faint DSOs often blend into the background, particularly under light-polluted or moonlit skies, making them hard to distinguish from stars or noise. 
+<ol>
+<li><b>Image Ambiguity</b>  Faint DSOs often blend into the background, particularly under light-polluted or moonlit skies, making them hard to distinguish from stars or noise.</li> 
     
-2.  **No Real-Time Feedback**  Most smart telescopes do not confirm if the target was captured, requiring manual checks or post-processing, which reduces interactivity and may lead to missed objects. 
+<li><b> No Real-Time Feedback</b>  Most smart telescopes do not confirm if the target was captured, requiring manual checks or post-processing, which reduces interactivity and may lead to missed objects.</li> 
     
-3.  **Environmental Sensitivity** Weather, light pollution and seasonal factors heavily influence image quality. Without real-time detection, users may unknowingly capture unusable data. 
+<li><b>Environmental Sensitivity</b> Weather, light pollution and seasonal factors heavily influence image quality. Without real-time detection, users may unknowingly capture unusable data.</li>
     
-4.  **Lack of Object Annotation** Consumer telescopes rarely label or identify captured objects, limiting scientific value and user understanding 
+<li><b>Lack of Object Annotation</b> Consumer telescopes rarely label or identify captured objects, limiting scientific value and user understanding </li></ol>
     
 
 These issues underscore the need for intelligent, real-time DSO detection and annotation using deep learning to improve efficiency and user experience. </p>
@@ -32,6 +32,7 @@ These issues underscore the need for intelligent, real-time DSO detection and an
 
 ![Alt text](./figure1.png)
 <div style="text-align: center;">This diagram outlines the conceptual flow of how deep learning turns raw telescope imagery into actionable insights, accessible even to non-experts.</div>
+
 
 **Step 1: Raw Telescope Image** 
 
@@ -83,7 +84,7 @@ This bridges the gap between data and understanding, helping the user understand
 
 **Data Collection: Ground Truth from the Backyard Sky** 
 
-<p style="text-align: justify;"> The training data used in this study was captured using consumer-grade smart telescopes—specifically the _Stellina_ and _Vespera_—in real-world conditions across Luxembourg, France, and Belgium. Over 50,000 raw FITS images and nearly 5,000 post-processed JPEG images were gathered during these sessions, often under light-polluted skies and variable weather. This dataset, featuring more than 250 different targets visible from the Northern Hemisphere.</p>
+<p style="text-align: justify;"> The training data used in this study was captured using consumer-grade smart telescopes—specifically the Stellina and Vespera in real-world conditions across Luxembourg, France and Belgium. Over 50,000 raw FITS images and nearly 5,000 post-processed JPEG images were gathered during these sessions, often under light-polluted skies and variable weather. This dataset, featuring more than 250 different targets visible from the Northern Hemisphere.</p>
 
 | **Dataset**            | **Content**                                         | **Used For**                                                 |
 |------------------------|-----------------------------------------------------|---------------------------------------------------------------|
@@ -93,7 +94,7 @@ This bridges the gap between data and understanding, helping the user understand
 
 **Diving into the Detection Techniques** 
 
-<p style="text-align: justify;"> Now that we have established the motivation and the data behind this research, we will dive into the four key deep learning techniques implemented to tackle the challenge of Deep Sky Object detection. Each approach brings a unique blend of speed, accuracy, and interpretability. These include: </p>
+<p style="text-align: justify;"> Now that we have established the motivation and the data behind this research, we will dive into the four key deep learning techniques implemented to tackle the challenge of Deep Sky Object detection. Each approach brings a unique blend of speed, accuracy and interpretability. These include: </p>
 
 *    A **naive approach** using StarNet with basic computer vision 
     
@@ -392,7 +393,7 @@ Its job is to critique the Generator and call out any inaccuracies or oddities i
 
 **Summary** 
 
-<p style="text-align: justify;">Each deep learning technique explored in this study brings distinct strengths tailored to different use cases in Electronically Assisted Astronomy. The <b>StarNet + CV</b> approach offers a quick and simple baseline but struggles with accuracy and noise. **YOLOv7** stands out as the most robust and balanced model, delivering high precision and real-time detection making it ideal for both automation and outreach. <b>ResNet50 + XRAI</b> trades speed for deep interpretability, offering rich visual insights into model reasoning, which is especially valuable for educational and scientific transparency. Finally, the <b>Pix2Pix GAN</b> cleverly mimics XRAI's outputs at a fraction of the cost, providing fast visual feedback for user-friendly applications. Together, these models represent a powerful toolkit, capable of transforming smart telescopes from passive imaging devices into intelligent, interactive observatories.</p>
+<p style="text-align: justify;">Each deep learning technique explored in this study brings distinct strengths tailored to different use cases in Electronically Assisted Astronomy. The <b>StarNet + CV</b> approach offers a quick and simple baseline but struggles with accuracy and noise. <b>YOLOv7</b> stands out as the most robust and balanced model, delivering high precision and real-time detection making it ideal for both automation and outreach. <b>ResNet50 + XRAI</b> trades speed for deep interpretability, offering rich visual insights into model reasoning, which is especially valuable for educational and scientific transparency. Finally, the <b>Pix2Pix GAN</b> cleverly mimics XRAI's outputs at a fraction of the cost, providing fast visual feedback for user-friendly applications. Together, these models represent a powerful toolkit, capable of transforming smart telescopes from passive imaging devices into intelligent, interactive observatories.</p>
 
 | Aspect         | YOLOv7                                | ResNet + XRAI                         | Pix2Pix GAN                          |
 |---------------|--------------------------------------|---------------------------------------|--------------------------------------|
