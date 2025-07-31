@@ -548,3 +548,11 @@ With improvements in model generalization, dataset diversity and computational e
 *   **Astroinformatics Overview**  Intro to data science and AI in astronomy.  Wikipedia: [Astroinformatics](https://en.wikipedia.org/wiki/Astroinformatics) 
     
 *   **YOLO Object Detection in Astronomy**  Foundational approach for real-time object detection applied to sky imagery.  A&A YOLO Study  [Original YOLO Paper (arXiv)](https://arxiv.org/abs/1506.02640)
+
+<hr>
+
+<footer style="font-size: 0.9em; text-align: center; color: #555; margin-top: 2em;">
+  <p><strong>Author:</strong> Amogh Mathad</p>
+  <p><strong>Email:</strong> <a href="mailto:st192509@stud.uni-stuttgart.de">st192509@stud.uni-stuttgart.de</a></p>
+  <p><strong>Organization:</strong> Universität Stuttgart, Germany</p>
+</footer>
