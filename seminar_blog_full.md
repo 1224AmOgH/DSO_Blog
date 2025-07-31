@@ -433,7 +433,7 @@ Its job is to critique the Generator and call out any inaccuracies or oddities i
 
 **1\. Smart Object Detection** 
 
-<p style="text-align: justify;">DL models like **YOLOv7** and **ResNet50** empower smart telescopes to automatically detect Deep Sky Objects (DSOs) as images are being captured. This is especially powerful for: unattended telescopes and dynamic observation workflows, where telescopes adjust exposure times or switch targets based on detection confidence </p>
+<p style="text-align: justify;">DL models like <b>YOLOv7</b> and <b>ResNet50</b> empower smart telescopes to automatically detect Deep Sky Objects (DSOs) as images are being captured. This is especially powerful for: unattended telescopes and dynamic observation workflows, where telescopes adjust exposure times or switch targets based on detection confidence </p>
 
 **2\. Post-Capture Image Filtering and Annotation** 
 
@@ -452,7 +452,6 @@ With thousands of images generated during observation sessions, manually reviewi
 
 <hr class="fancy-line">
 <h2>Limitations of Deep Learning in EAA</h2>
-
 <p style="text-align: justify;">While deep learning brings significant advancements to smart astronomy, it's not without constraints. Understanding these limitations is crucial for deploying models effectively and improving them further.</p> 
 
 **1\. Dataset Scope & Generalization** 
@@ -512,7 +511,7 @@ For real-time object detection, the next steps include: 
 
 *   **Multi-Class Training:** Rather than treating all DSOs as a single class, future models can distinguish between galaxies, clusters, and nebulae, offering richer annotations and educational value. 
 
-*   **Data Augmentation:** <p style="text-align: justify;"> Introducing variations (e.g., blurring, noise injection, brightness shifts) during training can help models generalize better—especially in noisy or underexposed conditions common in urban or short-exposure setups. By advancing both classification and detection pathways, future systems will not only be faster and more accurate but also more informative, interpretable, and resilient across diverse sky-watching scenarios. </p>
+*   **Data Augmentation:** Introducing variations (e.g., blurring, noise injection, brightness shifts) during training can help models generalize better—especially in noisy or underexposed conditions common in urban or short-exposure setups. By advancing both classification and detection pathways, future systems will not only be faster and more accurate but also more informative, interpretable, and resilient across diverse sky-watching scenarios.
 
 <hr class="fancy-line">
 <h2>Conclusion </h2>
