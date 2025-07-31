@@ -1,3 +1,4 @@
+<style>
 <css>
 hr.fancy-line {
   border: 0;
@@ -6,6 +7,7 @@ hr.fancy-line {
   margin: 2em 0;
 }
 </css>
+  </style>
 
 <h2>Introduction</h2>
 
