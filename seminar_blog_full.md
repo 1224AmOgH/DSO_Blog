@@ -288,9 +288,7 @@ This was the best-performing model among all approaches tested, delivering clean
 6.  **Heatmap Generation** 
     
 
-    <p style="text-align: justify;"> The regions with the highest cumulative contribution are overlaid as heatmaps, allowing you to visualize where the model “looked” when it decided that a DSO was present. 
-
-So, when you see a bright blue blob on an XRAI map, you are essentially seeing where the model focused its attention the most influential pixels in the decision-making process. </p>
+    <p style="text-align: justify;"> The regions with the highest cumulative contribution are overlaid as heatmaps, allowing you to visualize where the model “looked” when it decided that a DSO was present. So, when you see a bright blue blob on an XRAI map, you are essentially seeing where the model focused its attention the most influential pixels in the decision-making process. </p>
 
 **Performance** 
 
