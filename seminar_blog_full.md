@@ -345,7 +345,7 @@ To overcome this, the authors turned to Generative Adversarial Networks (GANs) s
 
 **How It Works** 
 
-<p style="text-align: justify;"> Pix2Pix is a conditional GAN trained for image-to-image translation. Instead of classifying or detecting objects directly, it learns to _transform one image into_ another—in this case, from raw telescope images to heatmaps that mimic XRAI outputs. </p>
+<p style="text-align: justify;"> Pix2Pix is a conditional GAN trained for image-to-image translation. Instead of classifying or detecting objects directly, it learns to transform one image into another in this case, from raw telescope images to heatmaps that mimic XRAI outputs. </p>
 
 **Inside the GAN: Generator vs. Discriminator** 
 
