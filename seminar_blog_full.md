@@ -140,9 +140,8 @@ These bounding boxes are then drawn back onto the original image, highlighting w
 **Results:** 
 
 ![](./figure2.png)
-<div style="text-align: center;">StarNet removes stars (left), and classic CV methods detect potential DSOs (right). Red boxes mark regions identified as non-stellar features using edge detection and OpenCV</div>
 
-_StarNet removes stars (left), and classic CV methods detect potential DSOs (right). Red boxes mark regions identified as non-stellar features using edge detection and OpenCV_ 
+<p style="text-align: centre;"> _StarNet removes stars (left), and classic CV methods detect potential DSOs (right). Red boxes mark regions identified as non-stellar features using edge detection and OpenCV_ </p>
 
 **Limitations** 
 
@@ -169,9 +168,8 @@ Despite being fast and requiring no training data, this technique has limited pr
 
 
 ![](./figure3.png)
-<div style="text-align: center;">The YOLOv7 pipeline takes a telescope image as input and outputs bounding boxes identifying Deep Sky Objects (DSOs) in real time.</div>
 
-_The YOLOv7 pipeline takes a telescope image as input and outputs bounding boxes identifying Deep Sky Objects (DSOs) in real time._ 
+<p style="text-align: centre;">_The YOLOv7 pipeline takes a telescope image as input and outputs bounding boxes identifying Deep Sky Objects (DSOs) in real time._ </p>
 <ol>
 <li><b>Dataset Creation** – DeepSpaceYoloDataset</b></li>
     
@@ -210,9 +208,8 @@ This was the best-performing model among all approaches tested, delivering clean
 **Result:**  
 
 ![](./figure4.png)
-<div style="text-align: center;">A wide-field image of Messier 49 (a galaxy in the Virgo cluster) showed clear, annotated boxes over the primary target and surrounding galaxies—visible even to non-expert viewers.</div>
 
-*A wide-field image of Messier 49 (a galaxy in the Virgo cluster) showed clear, annotated boxes over the primary target and surrounding galaxies—visible even to non-expert viewers.*
+<p style="text-align: centre;"> A wide-field image of Messier 49 (a galaxy in the Virgo cluster) showed clear, annotated boxes over the primary target and surrounding galaxies—visible even to non-expert viewers.</p>
 
 
 **Strengths** 
@@ -241,7 +238,7 @@ This was the best-performing model among all approaches tested, delivering clean
 
 ![](./figure5.png)
 
-_This pipeline classifies telescope images using ResNet50 and, if a DSO is detected, provides an interpretable explanation for accessible understanding._ 
+<p style="text-align: centre;">_This pipeline classifies telescope images using ResNet50 and, if a DSO is detected, provides an interpretable explanation for accessible understanding._ </p>
 
 1.  **Binary Classification with ResNet50** 
     
@@ -310,11 +307,11 @@ While slightly less precise than YOLOv7, it provides something YOLO cannot: visu
 
 ![](./figure6.png)
   
-  *   The core of Messier 13 (globular cluster)
+<p style="text-align: centre;"> The core of Messier 13 (globular cluster)</p>
     
 ![](./figure7.png)
 
-*   The faint glow of **Messier 76 (Little Dumbbell Nebula)** 
+<p style="text-align: centre;"> The faint glow of **Messier 76 (Little Dumbbell Nebula)</p>
     
 
 **Technique 4: Fast DSO Highlighting with Pix2Pix GAN** 
@@ -388,7 +385,9 @@ Its job is to critique the Generator and call out any inaccuracies or oddities i
     
 *   **No object labeling**: It shows _where_ the DSO is, but not _what_ it is.
 
-    ![](./figure8.png)
+
+**Results**
+  ![](./figure8.png)
     
 
 **Summary** 
