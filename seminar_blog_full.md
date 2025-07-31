@@ -19,7 +19,7 @@ Despite making stargazing more accessible and visually engaging, EAA still faces
 
 1.  **Image Ambiguity**  Faint DSOs often blend into the background, particularly under light-polluted or moonlit skies, making them hard to distinguish from stars or noise. 
     
-2.  **No Real-Time Feedback**  <p>Most smart telescopes do not confirm if the target was captured, requiring manual checks or post-processing, which reduces interactivity and may lead to missed objects. </p>
+2.  **No Real-Time Feedback**  <p> Most smart telescopes do not confirm if the target was captured, requiring manual checks or post-processing, which reduces interactivity and may lead to missed objects. </p>
     
 3.  **Environmental Sensitivity** Weather, light pollution and seasonal factors heavily influence image quality. Without real-time detection, users may unknowingly capture unusable data. 
     
